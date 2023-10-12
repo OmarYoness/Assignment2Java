@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Candy Poll Results</title>
+</head>
+<body>
+<h1 th:text="${Poll.title}"></h1>
+<table>
+    <tr>
+        <th>Option</th>
+        <th>Votes</th>
+        <th>Percentage</th>
+    </tr>
+    <tr>
+        <td th:text="${Poll.answer1}"></td>
+        <td th:text="${Poll.votes1}"></td>
+        <td th:text="${Poll.getPercentageVotes1()}"></td>
+    </tr>
+    <tr>
+        <td th:text="${Poll.answer2}"></td>
+        <td th:text="${Poll.votes2}"></td>
+        <td th:text="${Poll.getPercentageVotes2()}"></td>
+    </tr>
+    <tr>
+        <td th:text="${candyPoll.answer3}"></td>
+        <td th:text="${candyPoll.votes3}"></td>
+        <td th:text="${candyPoll.getPercentageVotes3()}"></td>
+    </tr>
+</table>
+</body>
+</html>

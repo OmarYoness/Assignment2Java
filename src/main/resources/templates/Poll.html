@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <title>Poll</title>
+</head>
+<body>
+<h1 th:text="${poll.title}"></h1>
+<form th:action="@{/poll/vote}" method="post">
+    <label>
+        <input type="radio" name="choice" value="answer1" />
+        <span th:text="${poll.answer1}"></span>
+    </label><br/>
+    <label>
+        <input type="radio" name="choice" value="answer2" />
+        <span th:text="${poll.answer2}"></span>
+    </label><br/>
+    <label>
+        <input type="radio" name="choice" value="answer3" />
+        <span th:text="${poll.answer3}"></span>
+    </label><br/>
+    <button type="submit">Vote</button>
+</form>
+</body>
+</html>
